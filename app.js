@@ -1,6 +1,8 @@
 
 var fs = require('fs');
 var input = process.argv[2];
+var currentSeason = 06/01/2015;
+
 
 
 //removes exceaa white space between values
@@ -10,6 +12,18 @@ function removeWhiteSpace(file){
   return file;
 }
 
+//determines if even
+function isEven(int) {
+  if(int % 2 == 0) {return true } else {  return false  }
+}
+
+function calcAge(object) {
+  if(object.age.length > 8) {
+    return object.age.substr(8,2);
+  }else {
+    return object["ageGroup"][0];
+  }
+}
 
 //takes an array an assignes keys to each array index
 function createObj (array,keys) {
@@ -40,8 +54,58 @@ function fixRowLength(array) {
 }
 
 
-function(array ) {
-    
+//Assignes the correct clean values based on determined criteria
+function assignKeys(object) {
+
+  //detrmines the gender based on the dirty value in the gender spot
+    if(isEven(object.extra5 )) {
+      object.gender = "Boys";
+    } else {
+      object.gender = "Girls";
+    }
+
+//determines the distance by the dirty value in the distance spot
+    if(object["distance"][0] == 2 ) {
+      object.distance = 25;
+    } else if (object["distance"][0] == 5) {
+      object.distance = 50;
+    }else {
+      object.distance = 100;
+    }
+
+//detrmines the stoke type by the value in the stoke spot
+    if(object["stroke"][1] == 1) {
+      object.stroke = "Freesttyle"
+    }else if (object["stroke"][1] == 2) {
+      object.stroke = "Backstroke"
+    }
+    else if (object["stroke"][1] == 3) {
+      object.stroke = "Breaststoke"
+    }
+    else if (object["stroke"][1] == 4) {
+      object.stroke = "Butterfly"
+    }
+    else if (object["stroke"][1] == 5) {
+      object.stroke = "Individual Medley";
+    }
+
+
+    //determies age group by the value in the age spot
+    if (calcAge(object) < 7) {
+      object.ageGroup = "6 & un";
+    }else if(calcAge(object) > 6 && calcAge(object) < 9 ){
+      object.ageGroup = "7-8";
+    }else if(calcAge(object)  > 8 && calcAge(object) < 11) {
+      object.ageGroup = "9-10";
+    }else if(calcAge(object)  > 10 && calcAge(object) < 13) {
+      object.ageGroup = "11-12";
+    }else if(calcAge(object)  > 12 && calcAge(object) < 15) {
+      object.ageGroup = "13-14";
+    }else if(calcAge(object)  > 14 && calcAge(object) < 19) {
+      object.ageGroup = "15-18";
+    }
+
+
 }
 
 
@@ -67,8 +131,8 @@ function removeUnRows(array,deleteChar1,deleteChar2,deleteChar3,deleteChar4,dele
 }
 
 
-
-var headers = ['extraOne','firstName','lastName','gender','age','ageGroup','team','stroke','distance','cTime','oTime','meet','date','extra2','extra3','extra4','extra5'];
+//keys
+var headers = ['extraOne','firstName','lastName','gender','age','ageGroup','distance','extra5','team','cTime','oTime','meet','date','extra2','extra3','extra4','stroke'];
 
 
 
@@ -93,6 +157,7 @@ fs.readFile(input,function(err,data){
 var objects = [];
   onlyNeededRows.forEach(function(data) {
     var object = createObj(fixRowLength(data),headers);
+    assignKeys(object);
     objects.push(object);
   });
 
