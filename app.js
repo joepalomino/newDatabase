@@ -1,5 +1,6 @@
 
 var fs = require('fs');
+var path = require('path');
 var input = process.argv[2];
 var currentSeason = 06/01/2015;
 
@@ -23,6 +24,15 @@ function calcAge(object) {
   }else {
     return object["ageGroup"][0];
   }
+}
+
+function setUniversalValues(array) {
+  for(var i = 0; i < array.length;i++) {
+      array[i].team = array[0].firstName;
+      array[i].date = array[0].cTime.substr(0,8);
+      array[i].meet = array[0].firstName + " " + array[0].lastName + " " + array[0].gender;
+  }
+
 }
 
 //takes an array an assignes keys to each array index
@@ -57,8 +67,11 @@ function fixRowLength(array) {
 //Assignes the correct clean values based on determined criteria
 function assignKeys(object) {
 
+  //gathers values from header object and assigns all objects
+
+
   //detrmines the gender based on the dirty value in the gender spot
-    if(isEven(object.extra5 )) {
+    if(isEven(object.event )) {
       object.gender = "Boys";
     } else {
       object.gender = "Girls";
@@ -89,19 +102,21 @@ function assignKeys(object) {
       object.stroke = "Individual Medley";
     }
 
+//sets age
+    object.age = calcAge(object);
 
     //determies age group by the value in the age spot
-    if (calcAge(object) < 7) {
+    if (object.age < 7) {
       object.ageGroup = "6 & un";
-    }else if(calcAge(object) > 6 && calcAge(object) < 9 ){
+    }else if(object.age > 6 && object.age < 9 ){
       object.ageGroup = "7-8";
-    }else if(calcAge(object)  > 8 && calcAge(object) < 11) {
+    }else if(object.age  > 8 && object.age < 11) {
       object.ageGroup = "9-10";
-    }else if(calcAge(object)  > 10 && calcAge(object) < 13) {
+    }else if(object.age  > 10 && object.age < 13) {
       object.ageGroup = "11-12";
-    }else if(calcAge(object)  > 12 && calcAge(object) < 15) {
+    }else if(object.age  > 12 && object.age < 15) {
       object.ageGroup = "13-14";
-    }else if(calcAge(object)  > 14 && calcAge(object) < 19) {
+    }else if(object.age  > 14 && object.age < 19) {
       object.ageGroup = "15-18";
     }
 
@@ -132,36 +147,50 @@ function removeUnRows(array,deleteChar1,deleteChar2,deleteChar3,deleteChar4,dele
 
 
 //keys
-var headers = ['extraOne','firstName','lastName','gender','age','ageGroup','distance','extra5','team','cTime','oTime','meet','date','extra2','extra3','extra4','stroke'];
+var headers = ['extraOne','firstName','lastName','gender','age','ageGroup','distance','event','team','cTime','oTime','meet','date','ovrallRank','extra3','heatRank','stroke'];
 
 
 
 
 
+
+//the actual processesor ---------------------------------------------------------------------
 
 fs.readFile(input,function(err,data){
-  var sdata = data.toString().split("\n");
 
-  var ndata = [];
+  if(path.extname(input) ==".cl2") { //prevents proccessing of other file types
 
-  for(var i = 0; i < sdata.length;i++) {
+    var sdata = data.toString().split("\n"); //splits file into an array of rows
 
-    var cleanData = removeWhiteSpace(sdata[i]);
+    var ndata = [];
 
-    var readyString = cleanData.split(",");
-    ndata.push(readyString);
+    for(var i = 0; i < sdata.length;i++) {
+
+      var cleanData = removeWhiteSpace(sdata[i]); //removes all the excess white space and seperates every value with a comma
+
+      var readyString = cleanData.split(","); //splits the row into an array of values
+      ndata.push(readyString);
+    }
+
+    var onlyNeededRows = removeUnRows(ndata,"E","F","Z","A","C","D3"); //removes the uneeded rows from the file
+
+  var objects = [];
+
+  for(var i = 0; i < onlyNeededRows.length;i++){
+    var object = createObj(fixRowLength(onlyNeededRows[i]),headers);
+    if(onlyNeededRows.indexOf(onlyNeededRows[i]) != 0) { //doesnt change the keys of our header array index
+      assignKeys(object);
+      objects.push(object);
+    }else {objects.push(object)}
+
   }
 
-  var onlyNeededRows = removeUnRows(ndata,"E","F","Z","A","C","D3");
-  //var fixedrowLength = fixRowLength(onlyNeededRows);
-var objects = [];
-  onlyNeededRows.forEach(function(data) {
-    var object = createObj(fixRowLength(data),headers);
-    assignKeys(object);
-    objects.push(object);
-  });
+  setUniversalValues(objects);
+  objects.shift(); //removes now irrelevant header array
+    console.log(objects);
 
-  console.log(objects);
+  } else{console.error("wrong file type");}
+
 
 
 
