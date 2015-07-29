@@ -59,7 +59,7 @@ function* createConnection(next) {
 function byTopTimes() {
   return function *(next) {
     var q = this.request.query;
-    var cursor = yield r.table('swim').orderBy(r.row('entryTime')).filter(
+    var cursor = yield r.table('slslDatabase').orderBy(r.row('entryTime')).filter(
       r.row('gender').upcase().eq(q.gender.toUpperCase())
       .and(r.row('ageGroup').upcase().eq(q.agegroup.toUpperCase()))
       .and(r.row('stroke').upcase().eq(q.stroke.toUpperCase()))
@@ -79,11 +79,11 @@ function bySwimmer() {
     var q = this.request.query;
 
     //pulls data from the db
-    var cursor = yield r.table('swim').filter(function(swim) {
+    var cursor = yield r.table('slslDatabase').filter(function(swim) {
 
       //if there is no query it will return all data else returns only the data specified by the query
       if(qs == "") {
-        return swim.hasFields("fullName");
+        return swim.getField("fullName");
       } else {
         return swim('fullName').upcase().eq(q.fullname.toUpperCase());
       }
@@ -101,7 +101,7 @@ function byMeet () {
     var qs = this.request.querystring;
     var q = this.request.query;
 
-    var cursor = yield r.table('swim').filter(function(swimmer) {
+    var cursor = yield r.table('slslDatabase').filter(function(swimmer) {
       if(qs == '') {
         return swimmer.pluck('meet');
       } else {
@@ -130,7 +130,7 @@ r.connect(config.rethinkdb, function(err,conn) {
     process.exit(1);
   }
 
-  r.table('swim').indexWait().run(conn).then(function(err,result) {
+  r.table('slslDatabase').indexWait().run(conn).then(function(err,result) {
     console.log("databse is ready, starting koa........");
     startKoa();
   });
