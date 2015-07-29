@@ -9,6 +9,7 @@ var parse = require('co-body');
 var router = require('koa-router');
 var http = require('http');
 var logger = require('koa-logger');
+var cors = require('koa-cors');
 
 
 //import rethinkdb
@@ -30,6 +31,8 @@ app.use(serve(__dirname+'/public'));
 
 //create a rethinkdb connection
 app.use(createConnection);
+
+app.use(cors());
 
 api.get('/toptimes',byTopTimes());
 api.get('/swimmer',bySwimmer());

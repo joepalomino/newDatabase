@@ -6,6 +6,6 @@ module.exports = {
     db:"test"
   },
   koa: {
-    port:3000
+    port:8080
   }
 }
