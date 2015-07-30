@@ -67,7 +67,7 @@ function byTopTimes() {
       .and(r.row('ageGroup').upcase().eq(q.agegroup.toUpperCase()))
       .and(r.row('stroke').upcase().eq(q.stroke.toUpperCase()))
       .and(r.row('distance').eq(q.dist))
-      .and(r.row('team').upcase.eq(q.team.toUpperCase()))
+      .and(r.row('team').upcase().eq(q.team.toUpperCase()))
       ).run(this._rdbConn);
     var result = yield cursor.toArray();
     this.body = JSON.stringify(result);
