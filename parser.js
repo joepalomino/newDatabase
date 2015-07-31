@@ -20,7 +20,7 @@ function calcAge(object) {
 
 function setUniversalValues(array) {
   for(var i = 0; i < array.length;i++) {
-      array[i].team = array[0].lastName;
+      array[i].team = array[1].lastName;
       array[i].date = array[0].entryTime.substr(0,8);
       array[i].meet = array[0].lastName + " " + array[0].firstName + " " + array[0].gender;
   }
@@ -162,13 +162,13 @@ function parse(data) {
     ndata.push(readyString);
   }
 
-  var onlyNeededRows = removeUnRows(ndata,"E","F","Z","A","C","D3"); //removes the uneeded rows from the file
+  var onlyNeededRows = removeUnRows(ndata,"E","F","Z","A","Z","D3"); //removes the uneeded rows from the file
 
 var objects = [];
 
 for(var i = 0; i < onlyNeededRows.length;i++){
   var object = createObj(fixRowLength(onlyNeededRows[i]),headers);
-  if(onlyNeededRows.indexOf(onlyNeededRows[i]) != 0) { //doesnt change the keys of our header array index
+  if(onlyNeededRows.indexOf(onlyNeededRows[i]) != 0 && onlyNeededRows.indexOf(onlyNeededRows[i]) != 1) { //doesnt change the keys of our first 2 header array index
     assignKeys(object);
     objects.push(object);
   }else {objects.push(object)}
@@ -176,6 +176,7 @@ for(var i = 0; i < onlyNeededRows.length;i++){
 }
 
 setUniversalValues(objects);
+objects.shift();//removes now irrelevant header array
 objects.shift(); //removes now irrelevant header array
 
   return objects;

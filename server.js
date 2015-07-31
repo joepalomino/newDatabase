@@ -62,16 +62,30 @@ function* createConnection(next) {
 function byTopTimes() {
   return function *(next) {
     var q = this.request.query;
-    var cursor = yield r.table('slslDatabase').orderBy(r.row('entryTime')).filter(
-      r.row('gender').upcase().eq(q.gender.toUpperCase())
-      .and(r.row('ageGroup').upcase().eq(q.agegroup.toUpperCase()))
-      .and(r.row('stroke').upcase().eq(q.stroke.toUpperCase()))
-      .and(r.row('distance').eq(q.dist))
-      .and(r.row('team').upcase().eq(q.team.toUpperCase()))
-      ).run(this._rdbConn);
-    var result = yield cursor.toArray();
-    this.body = JSON.stringify(result);
-    yield next;
+
+    if(q.team === 'ALL') {
+      var cursor = yield r.table('slslDatabase').orderBy(r.row('entryTime')).filter(
+        r.row('gender').upcase().eq(q.gender.toUpperCase())
+        .and(r.row('ageGroup').upcase().eq(q.agegroup.toUpperCase()))
+        .and(r.row('stroke').upcase().eq(q.stroke.toUpperCase()))
+        .and(r.row('distance').eq(q.dist))
+        ).run(this._rdbConn);
+      var result = yield cursor.toArray();
+      this.body = JSON.stringify(result);
+      yield next;
+    } else {
+      var cursor = yield r.table('slslDatabase').orderBy(r.row('entryTime')).filter(
+        r.row('gender').upcase().eq(q.gender.toUpperCase())
+        .and(r.row('ageGroup').upcase().eq(q.agegroup.toUpperCase()))
+        .and(r.row('stroke').upcase().eq(q.stroke.toUpperCase()))
+        .and(r.row('distance').eq(q.dist))
+        .and(r.row('team').upcase().eq(q.team.toUpperCase()))
+        ).run(this._rdbConn);
+      var result = yield cursor.toArray();
+      this.body = JSON.stringify(result);
+      yield next;
+    }
+
   }
 }
 

@@ -33,3 +33,26 @@
 2015-07-28T21:03:41.984071000 246.187811s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
 2015-07-28T21:03:41.988908000 246.192648s notice: Storage engine shut down.
 2015-07-28T21:03:41.989498000 246.193238s info: Disconnected from server "ip_172_31_18_219_fw3" a3495be2-4701-43bc-9e0f-6a7cfe96d80f
+2015-07-30T19:14:59.914331000 0.384583s notice: Running rethinkdb 2.0.3 (CLANG 4.2 (clang-425.0.28))...
+2015-07-30T19:15:00.314543000 0.784853s notice: Running on Darwin 14.4.0 x86_64
+2015-07-30T19:15:00.314677000 0.784985s notice: Loading data from directory /Users/ALegendaryWolf/Documents/database/rethinkdb_data
+2015-07-30T19:15:01.653575000 2.123883s info: Automatically using cache size of 100 MB
+2015-07-30T19:15:01.653595000 2.123902s warn: Cache size does not leave much memory for server and query overhead (available memory: 456 MB).
+2015-07-30T19:15:01.653605000 2.123912s warn: Cache size is very low and may impact performance.
+2015-07-30T19:15:01.656109000 2.126417s notice: Listening for intracluster connections on port 29015
+2015-07-30T19:15:01.656656000 2.126964s info: Attempting connection to 1 peer...
+2015-07-30T19:15:01.835465000 2.305773s notice: Listening for client driver connections on port 28015
+2015-07-30T19:15:01.835784000 2.306092s notice: Listening for administrative HTTP connections on port 8080
+2015-07-30T19:15:01.839006000 2.309314s notice: Listening on addresses: 127.0.0.1, 192.168.0.6, ::1, fe80::1%1, fe80::e6ce:8fff:fe2b:3e84%6
+2015-07-30T19:15:01.839025000 2.309333s notice: Server ready, "Palominos_MacBook_Pro_local_fal" 420506ce-aaae-4334-bf5f-1e48f3c8142b
+2015-07-30T19:15:01.839337000 2.309644s notice: Connected to server "ip_172_31_18_219_fw3" a3495be2-4701-43bc-9e0f-6a7cfe96d80f
+2015-07-30T19:15:02.069833000 2.540201s notice: A newer version of the RethinkDB server is available: 2.0.4. You can read the changelog at <https://github.com/rethinkdb/rethinkdb/releases>.
+2015-07-30T19:17:54.251120000 174.726773s notice: Removing file /Users/ALegendaryWolf/Documents/database/rethinkdb_data/8ab6dafa-0f86-469e-9e14-ebe6a149e9d0
+2015-07-30T22:42:25.866321000 5809.492310s info: Disconnected from server "ip_172_31_18_219_fw3" a3495be2-4701-43bc-9e0f-6a7cfe96d80f
+2015-07-30T22:42:26.601228000 5810.227217s notice: Connected to server "ip_172_31_18_219_fw3" a3495be2-4701-43bc-9e0f-6a7cfe96d80f
+2015-07-30T22:54:40.190329000 6544.875893s notice: Server got SIGINT from pid 400, uid 502; shutting down...
+2015-07-30T22:54:40.264880000 6544.950444s notice: Shutting down client connections...
+2015-07-30T22:54:40.265252000 6544.950815s notice: All client connections closed.
+2015-07-30T22:54:40.265279000 6544.950843s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2015-07-30T22:54:40.278672000 6544.964237s notice: Storage engine shut down.
+2015-07-30T22:54:40.279883000 6544.965446s info: Disconnected from server "ip_172_31_18_219_fw3" a3495be2-4701-43bc-9e0f-6a7cfe96d80f
