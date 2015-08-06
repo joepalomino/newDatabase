@@ -69,7 +69,11 @@ function byTopTimes() {
         .and(r.row('ageGroup').upcase().eq(q.agegroup.toUpperCase()))
         .and(r.row('stroke').upcase().eq(q.stroke.toUpperCase()))
         .and(r.row('distance').eq(q.dist))
-        ).run(this._rdbConn);
+      ).group('fullName')
+      .min('finalTime')
+      .ungroup()
+      .orderBy(r.row('reduction')('finalTime'))
+      .run(this._rdbConn);
       var result = yield cursor.toArray();
       this.body = JSON.stringify(result);
       yield next;
@@ -80,7 +84,11 @@ function byTopTimes() {
         .and(r.row('stroke').upcase().eq(q.stroke.toUpperCase()))
         .and(r.row('distance').eq(q.dist))
         .and(r.row('team').upcase().eq(q.team.toUpperCase()))
-        ).run(this._rdbConn);
+        ).group('fullName')
+        .min('finalTime')
+        .ungroup()
+        .orderBy(r.row('reduction')('finalTime'))
+        .run(this._rdbConn);
       var result = yield cursor.toArray();
       this.body = JSON.stringify(result);
       yield next;
@@ -118,17 +126,24 @@ function byMeet () {
     var qs = this.request.querystring;
     var q = this.request.query;
 
-    var cursor = yield r.table('slslDatabase').filter(function(swimmer) {
-      if(qs == '') {
-        return swimmer.pluck('meet');
-      } else {
-        return swimmer('meet').upcase().eq(q.meet.toUpperCase())
-      }
-    }).run(this._rdbConn);
-    var result = yield cursor.toArray();
-    this.body = JSON.stringify(result);
+    if(q.meet == "true") {
+      var cursor = yield r.table('slslDatabase').without('id').pluck('meet','date').distinct().orderBy(r.row('date')).run(this._rdbConn);
+      var result = yield cursor.toArray();
+      this.body = JSON.stringify(result);
 
-    yield next;
+      yield next;
+    } else {
+      var cursor = yield r.table('slslDatabase').without('id').distinct().orderBy(r.row('finalTime')).orderBy(r.row('event')).filter(
+        r.row('meet').upcase().eq(q.meet.toUpperCase())
+        .and(r.row('date').eq(q.date.toUpperCase()))
+      ).run(this._rdbConn);
+
+      var result = yield cursor.toArray();
+      this .body = JSON.stringify(result);
+
+      yield next
+    }
+
   }
 }
 

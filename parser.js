@@ -47,7 +47,8 @@ function fixRowLength(array) {
       array.splice(9,0,array[9])
     }
 
-    if(array[14].length !== 2) {
+
+    if(array[14].length !== 2)  {
       array.splice(14,0,"extra");
     }
 
@@ -80,12 +81,12 @@ function assignKeys(object) {
 
 //detrmines the stoke type by the value in the stoke spot
     if(object["stroke"][1] == 1) {
-      object.stroke = "Freesttyle"
+      object.stroke = "Freestyle"
     }else if (object["stroke"][1] == 2) {
       object.stroke = "Backstroke"
     }
     else if (object["stroke"][1] == 3) {
-      object.stroke = "Breaststoke"
+      object.stroke = "Breaststroke"
     }
     else if (object["stroke"][1] == 4) {
       object.stroke = "Butterfly"

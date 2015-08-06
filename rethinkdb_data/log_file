@@ -56,3 +56,191 @@
 2015-07-30T22:54:40.265279000 6544.950843s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
 2015-07-30T22:54:40.278672000 6544.964237s notice: Storage engine shut down.
 2015-07-30T22:54:40.279883000 6544.965446s info: Disconnected from server "ip_172_31_18_219_fw3" a3495be2-4701-43bc-9e0f-6a7cfe96d80f
+2015-08-01T17:28:17.976468000 0.445468s notice: Running rethinkdb 2.0.3 (CLANG 4.2 (clang-425.0.28))...
+2015-08-01T17:28:18.044051000 0.513045s notice: Running on Darwin 14.4.0 x86_64
+2015-08-01T17:28:18.044131000 0.513123s notice: Loading data from directory /Users/ALegendaryWolf/Documents/Personal Projects/database/rethinkdb_data
+2015-08-01T17:28:19.004249000 1.473300s info: Automatically using cache size of 100 MB
+2015-08-01T17:28:19.004262000 1.473313s warn: Cache size does not leave much memory for server and query overhead (available memory: 234 MB).
+2015-08-01T17:28:19.004269000 1.473320s warn: Cache size is very low and may impact performance.
+2015-08-01T17:28:19.006138000 1.475189s notice: Listening for intracluster connections on port 29015
+2015-08-01T17:28:19.006425000 1.475476s info: Attempting connection to 1 peer...
+2015-08-01T17:28:19.237841000 1.706892s notice: Listening for client driver connections on port 28015
+2015-08-01T17:28:19.238119000 1.707171s notice: Listening for administrative HTTP connections on port 8080
+2015-08-01T17:28:19.239307000 1.708358s notice: Listening on addresses: 127.0.0.1, 192.168.0.66, ::1, fe80::1%1, fe80::e6ce:8fff:fe2b:3e84%5
+2015-08-01T17:28:19.239324000 1.708375s notice: Server ready, "Palominos_MacBook_Pro_local_fal" 420506ce-aaae-4334-bf5f-1e48f3c8142b
+2015-08-01T17:28:19.288633000 1.757684s notice: Connected to server "ip_172_31_18_219_fw3" a3495be2-4701-43bc-9e0f-6a7cfe96d80f
+2015-08-01T17:28:19.543138000 2.012190s notice: A newer version of the RethinkDB server is available: 2.0.4. You can read the changelog at <https://github.com/rethinkdb/rethinkdb/releases>.
+2015-08-01T17:31:23.949022000 186.423809s notice: Removing file /Users/ALegendaryWolf/Documents/Personal Projects/database/rethinkdb_data/77339ee7-f16d-4688-a09a-7438f38db53a
+2015-08-01T18:09:31.148006000 2277.985936s info: Disconnected from server "ip_172_31_18_219_fw3" a3495be2-4701-43bc-9e0f-6a7cfe96d80f
+2015-08-01T18:09:31.548883000 2278.386814s notice: Connected to server "ip_172_31_18_219_fw3" a3495be2-4701-43bc-9e0f-6a7cfe96d80f
+2015-08-01T19:11:55.861965000 2479.936267s info: Disconnected from server "ip_172_31_18_219_fw3" a3495be2-4701-43bc-9e0f-6a7cfe96d80f
+2015-08-01T19:11:56.281882000 2480.356184s notice: Connected to server "ip_172_31_18_219_fw3" a3495be2-4701-43bc-9e0f-6a7cfe96d80f
+2015-08-01T19:26:16.725160000 3116.695347s info: Disconnected from server "ip_172_31_18_219_fw3" a3495be2-4701-43bc-9e0f-6a7cfe96d80f
+2015-08-01T19:26:17.097234000 3117.067421s notice: Connected to server "ip_172_31_18_219_fw3" a3495be2-4701-43bc-9e0f-6a7cfe96d80f
+2015-08-01T19:32:22.991569000 3482.103309s notice: Server got SIGINT from pid 1207, uid 502; shutting down...
+2015-08-01T19:32:23.052617000 3482.164359s notice: Shutting down client connections...
+2015-08-01T19:32:23.052937000 3482.164678s notice: All client connections closed.
+2015-08-01T19:32:23.053002000 3482.164743s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2015-08-01T19:32:23.154225000 3482.265967s notice: Storage engine shut down.
+2015-08-01T19:32:23.155655000 3482.267396s info: Disconnected from server "ip_172_31_18_219_fw3" a3495be2-4701-43bc-9e0f-6a7cfe96d80f
+2015-08-01T19:44:09.499722000 0.622479s notice: Running rethinkdb 2.0.3 (CLANG 4.2 (clang-425.0.28))...
+2015-08-01T19:44:09.750430000 0.873182s notice: Running on Darwin 14.4.0 x86_64
+2015-08-01T19:44:09.750525000 0.873275s notice: Loading data from directory /Users/ALegendaryWolf/Documents/Personal Projects/database/rethinkdb_data
+2015-08-01T19:44:10.884712000 2.007461s info: Automatically using cache size of 100 MB
+2015-08-01T19:44:10.884723000 2.007472s warn: Cache size is larger than available memory.
+2015-08-01T19:44:10.884731000 2.007480s warn: Cache size is very low and may impact performance.
+2015-08-01T19:44:10.886123000 2.008872s notice: Listening for intracluster connections on port 29015
+2015-08-01T19:44:10.889658000 2.012407s info: Attempting connection to 1 peer...
+2015-08-01T19:44:11.164795000 2.287545s notice: Connected to server "ip_172_31_18_219_fw3" a3495be2-4701-43bc-9e0f-6a7cfe96d80f
+2015-08-01T19:44:11.179880000 2.302630s notice: Listening for client driver connections on port 28015
+2015-08-01T19:44:11.180230000 2.302979s notice: Listening for administrative HTTP connections on port 8080
+2015-08-01T19:44:11.181341000 2.304091s notice: Listening on addresses: 127.0.0.1, 192.168.0.66, ::1, fe80::1%1, fe80::e6ce:8fff:fe2b:3e84%5
+2015-08-01T19:44:11.181363000 2.304112s notice: Server ready, "Palominos_MacBook_Pro_local_fal" 420506ce-aaae-4334-bf5f-1e48f3c8142b
+2015-08-01T19:44:11.547707000 2.670515s notice: A newer version of the RethinkDB server is available: 2.0.4. You can read the changelog at <https://github.com/rethinkdb/rethinkdb/releases>.
+2015-08-01T20:06:57.554801000 583.091660s info: Disconnected from server "ip_172_31_18_219_fw3" a3495be2-4701-43bc-9e0f-6a7cfe96d80f
+2015-08-01T20:06:57.981392000 583.518251s notice: Connected to server "ip_172_31_18_219_fw3" a3495be2-4701-43bc-9e0f-6a7cfe96d80f
+2015-08-01T20:23:26.401223000 1571.833421s notice: Server got SIGINT from pid 1207, uid 502; shutting down...
+2015-08-01T20:23:26.476843000 1571.909042s notice: Shutting down client connections...
+2015-08-01T20:23:26.477097000 1571.909294s notice: All client connections closed.
+2015-08-01T20:23:26.477184000 1571.909381s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2015-08-01T20:23:26.567241000 1571.999438s notice: Storage engine shut down.
+2015-08-01T20:23:26.567815000 1572.000012s info: Disconnected from server "ip_172_31_18_219_fw3" a3495be2-4701-43bc-9e0f-6a7cfe96d80f
+2015-08-01T20:23:54.521142000 0.296523s notice: Running rethinkdb 2.0.3 (CLANG 4.2 (clang-425.0.28))...
+2015-08-01T20:23:54.785504000 0.560880s notice: Running on Darwin 14.4.0 x86_64
+2015-08-01T20:23:54.785609000 0.560982s notice: Loading data from directory /Users/ALegendaryWolf/Documents/Personal Projects/database/rethinkdb_data
+2015-08-01T20:23:55.852014000 1.627446s info: Automatically using cache size of 100 MB
+2015-08-01T20:23:55.852028000 1.627460s warn: Cache size does not leave much memory for server and query overhead (available memory: 248 MB).
+2015-08-01T20:23:55.852035000 1.627467s warn: Cache size is very low and may impact performance.
+2015-08-01T20:23:55.853553000 1.628985s notice: Listening for intracluster connections on port 29015
+2015-08-01T20:23:55.853866000 1.629299s info: Attempting connection to 1 peer...
+2015-08-01T20:23:56.109455000 1.884888s notice: Listening for client driver connections on port 28015
+2015-08-01T20:23:56.109812000 1.885245s notice: Listening for administrative HTTP connections on port 8080
+2015-08-01T20:23:56.111168000 1.886601s notice: Listening on addresses: 127.0.0.1, 192.168.0.66, ::1, fe80::1%1, fe80::e6ce:8fff:fe2b:3e84%5
+2015-08-01T20:23:56.111179000 1.886612s notice: Server ready, "Palominos_MacBook_Pro_local_fal" 420506ce-aaae-4334-bf5f-1e48f3c8142b
+2015-08-01T20:23:56.199242000 1.974676s notice: Connected to server "ip_172_31_18_219_fw3" a3495be2-4701-43bc-9e0f-6a7cfe96d80f
+2015-08-01T20:23:56.406952000 2.182385s notice: A newer version of the RethinkDB server is available: 2.0.4. You can read the changelog at <https://github.com/rethinkdb/rethinkdb/releases>.
+2015-08-01T20:25:13.470695000 79.248525s notice: Server got SIGINT from pid 1207, uid 502; shutting down...
+2015-08-01T20:25:13.470939000 79.248767s notice: Shutting down client connections...
+2015-08-01T20:25:13.471081000 79.248909s notice: All client connections closed.
+2015-08-01T20:25:13.471095000 79.248923s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2015-08-01T20:25:13.477416000 79.255244s notice: Storage engine shut down.
+2015-08-01T20:25:13.478083000 79.255911s info: Disconnected from server "ip_172_31_18_219_fw3" a3495be2-4701-43bc-9e0f-6a7cfe96d80f
+2015-08-01T20:25:26.447461000 0.005206s notice: Running rethinkdb 2.0.3 (CLANG 4.2 (clang-425.0.28))...
+2015-08-01T20:25:26.451510000 0.009252s notice: Running on Darwin 14.4.0 x86_64
+2015-08-01T20:25:26.451582000 0.009323s notice: Loading data from directory /Users/ALegendaryWolf/Documents/Personal Projects/database/rethinkdb_data
+2015-08-01T20:25:27.925299000 1.483098s info: Automatically using cache size of 100 MB
+2015-08-01T20:25:27.925313000 1.483112s warn: Cache size does not leave much memory for server and query overhead (available memory: 237 MB).
+2015-08-01T20:25:27.925333000 1.483132s warn: Cache size is very low and may impact performance.
+2015-08-01T20:25:27.927248000 1.485047s notice: Listening for intracluster connections on port 29015
+2015-08-01T20:25:27.927556000 1.485355s info: Attempting connection to 1 peer...
+2015-08-01T20:25:28.149051000 1.706851s notice: Connected to server "ip_172_31_18_219_fw3" a3495be2-4701-43bc-9e0f-6a7cfe96d80f
+2015-08-01T20:25:28.151965000 1.709764s notice: Listening for client driver connections on port 28015
+2015-08-01T20:25:28.152153000 1.709952s notice: Listening for administrative HTTP connections on port 8080
+2015-08-01T20:25:28.153241000 1.711040s notice: Listening on addresses: 127.0.0.1, 192.168.0.66, ::1, fe80::1%1, fe80::e6ce:8fff:fe2b:3e84%5
+2015-08-01T20:25:28.153283000 1.711082s notice: Server ready, "Palominos_MacBook_Pro_local_fal" 420506ce-aaae-4334-bf5f-1e48f3c8142b
+2015-08-01T20:25:28.286165000 1.843965s notice: A newer version of the RethinkDB server is available: 2.0.4. You can read the changelog at <https://github.com/rethinkdb/rethinkdb/releases>.
+2015-08-01T20:36:58.252057000 691.831361s notice: Server got SIGINT from pid 1207, uid 502; shutting down...
+2015-08-01T20:36:58.252359000 691.831663s notice: Shutting down client connections...
+2015-08-01T20:36:58.252571000 691.831875s notice: All client connections closed.
+2015-08-01T20:36:58.252582000 691.831885s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2015-08-01T20:36:58.259430000 691.838733s notice: Storage engine shut down.
+2015-08-01T20:36:58.260016000 691.839320s info: Disconnected from server "ip_172_31_18_219_fw3" a3495be2-4701-43bc-9e0f-6a7cfe96d80f
+2015-08-01T20:37:04.903439000 0.271973s notice: Running rethinkdb 2.0.3 (CLANG 4.2 (clang-425.0.28))...
+2015-08-01T20:37:05.034973000 0.403505s notice: Running on Darwin 14.4.0 x86_64
+2015-08-01T20:37:05.035051000 0.403581s notice: Loading data from directory /Users/ALegendaryWolf/Documents/Personal Projects/database/rethinkdb_data
+2015-08-01T20:37:05.992417000 1.361005s info: Automatically using cache size of 100 MB
+2015-08-01T20:37:05.992434000 1.361021s warn: Cache size does not leave much memory for server and query overhead (available memory: 159 MB).
+2015-08-01T20:37:05.992444000 1.361032s warn: Cache size is very low and may impact performance.
+2015-08-01T20:37:05.994197000 1.362785s notice: Listening for intracluster connections on port 29015
+2015-08-01T20:37:05.994439000 1.363027s info: Attempting connection to 1 peer...
+2015-08-01T20:37:06.253027000 1.621615s notice: Listening for client driver connections on port 28015
+2015-08-01T20:37:06.253231000 1.621819s notice: Listening for administrative HTTP connections on port 8080
+2015-08-01T20:37:06.255367000 1.623956s notice: Listening on addresses: 127.0.0.1, 192.168.0.66, ::1, fe80::1%1, fe80::e6ce:8fff:fe2b:3e84%5
+2015-08-01T20:37:06.255433000 1.624020s notice: Server ready, "Palominos_MacBook_Pro_local_fal" 420506ce-aaae-4334-bf5f-1e48f3c8142b
+2015-08-01T20:37:06.258884000 1.627473s notice: Connected to server "ip_172_31_18_219_fw3" a3495be2-4701-43bc-9e0f-6a7cfe96d80f
+2015-08-01T20:37:06.407296000 1.775884s notice: A newer version of the RethinkDB server is available: 2.0.4. You can read the changelog at <https://github.com/rethinkdb/rethinkdb/releases>.
+2015-08-01T20:45:47.214556000 522.599329s notice: Server got SIGINT from pid 1207, uid 502; shutting down...
+2015-08-01T20:45:47.214808000 522.599581s notice: Shutting down client connections...
+2015-08-01T20:45:47.215010000 522.599782s notice: All client connections closed.
+2015-08-01T20:45:47.215017000 522.599789s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2015-08-01T20:45:47.221352000 522.606124s notice: Storage engine shut down.
+2015-08-01T20:45:47.221876000 522.606648s info: Disconnected from server "ip_172_31_18_219_fw3" a3495be2-4701-43bc-9e0f-6a7cfe96d80f
+2015-08-01T20:46:13.699784000 0.298232s notice: Running rethinkdb 2.0.3 (CLANG 4.2 (clang-425.0.28))...
+2015-08-01T20:46:13.729179000 0.327621s notice: Running on Darwin 14.4.0 x86_64
+2015-08-01T20:46:13.729254000 0.327694s notice: Loading data from directory /Users/ALegendaryWolf/Documents/Personal Projects/database/rethinkdb_data
+2015-08-01T20:46:14.743962000 1.342402s info: Automatically using cache size of 100 MB
+2015-08-01T20:46:14.743975000 1.342415s warn: Cache size does not leave much memory for server and query overhead (available memory: 134 MB).
+2015-08-01T20:46:14.743983000 1.342422s warn: Cache size is very low and may impact performance.
+2015-08-01T20:46:14.745907000 1.344347s notice: Listening for intracluster connections on port 29015
+2015-08-01T20:46:14.746186000 1.344626s info: Attempting connection to 1 peer...
+2015-08-01T20:46:15.208451000 1.806891s notice: Listening for client driver connections on port 28015
+2015-08-01T20:46:15.208748000 1.807189s notice: Listening for administrative HTTP connections on port 8080
+2015-08-01T20:46:15.210282000 1.808723s notice: Listening on addresses: 127.0.0.1, 192.168.0.66, ::1, fe80::1%1, fe80::e6ce:8fff:fe2b:3e84%5
+2015-08-01T20:46:15.210344000 1.808784s notice: Server ready, "Palominos_MacBook_Pro_local_fal" 420506ce-aaae-4334-bf5f-1e48f3c8142b
+2015-08-01T20:46:15.280645000 1.879086s notice: Connected to server "ip_172_31_18_219_fw3" a3495be2-4701-43bc-9e0f-6a7cfe96d80f
+2015-08-01T20:46:15.350088000 1.948528s notice: A newer version of the RethinkDB server is available: 2.0.4. You can read the changelog at <https://github.com/rethinkdb/rethinkdb/releases>.
+2015-08-01T20:54:20.348701000 486.962254s notice: Server got SIGINT from pid 1207, uid 502; shutting down...
+2015-08-01T20:54:20.348934000 486.962486s notice: Shutting down client connections...
+2015-08-01T20:54:20.349205000 486.962757s notice: All client connections closed.
+2015-08-01T20:54:20.349226000 486.962778s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2015-08-01T20:54:20.356485000 486.970056s notice: Storage engine shut down.
+2015-08-01T20:54:20.357078000 486.970649s info: Disconnected from server "ip_172_31_18_219_fw3" a3495be2-4701-43bc-9e0f-6a7cfe96d80f
+2015-08-01T20:56:08.177471000 0.004417s notice: Running rethinkdb 2.0.3 (CLANG 4.2 (clang-425.0.28))...
+2015-08-01T20:56:08.334428000 0.161372s notice: Running on Darwin 14.4.0 x86_64
+2015-08-01T20:56:08.334512000 0.161454s notice: Loading data from directory /Users/ALegendaryWolf/Documents/Personal Projects/database/rethinkdb_data
+2015-08-01T20:56:09.534783000 1.361784s info: Automatically using cache size of 100 MB
+2015-08-01T20:56:09.534794000 1.361795s warn: Cache size is larger than available memory.
+2015-08-01T20:56:09.534801000 1.361802s warn: Cache size is very low and may impact performance.
+2015-08-01T20:56:09.536158000 1.363158s notice: Listening for intracluster connections on port 29015
+2015-08-01T20:56:09.536387000 1.363388s info: Attempting connection to 1 peer...
+2015-08-01T20:56:09.759826000 1.586827s notice: Listening for client driver connections on port 28015
+2015-08-01T20:56:09.760185000 1.587188s notice: Listening for administrative HTTP connections on port 8080
+2015-08-01T20:56:09.761802000 1.588804s notice: Listening on addresses: 127.0.0.1, 192.168.0.66, ::1, fe80::1%1, fe80::e6ce:8fff:fe2b:3e84%5
+2015-08-01T20:56:09.761935000 1.588936s notice: Server ready, "Palominos_MacBook_Pro_local_fal" 420506ce-aaae-4334-bf5f-1e48f3c8142b
+2015-08-01T20:56:09.852617000 1.679618s notice: Connected to server "ip_172_31_18_219_fw3" a3495be2-4701-43bc-9e0f-6a7cfe96d80f
+2015-08-01T20:56:10.026791000 1.853792s notice: A newer version of the RethinkDB server is available: 2.0.4. You can read the changelog at <https://github.com/rethinkdb/rethinkdb/releases>.
+2015-08-01T20:58:41.872985000 153.704718s info: Disconnected from server "ip_172_31_18_219_fw3" a3495be2-4701-43bc-9e0f-6a7cfe96d80f
+2015-08-01T21:05:40.758910000 572.603667s notice: Connected to server "ip_172_31_18_219_fw3" a3495be2-4701-43bc-9e0f-6a7cfe96d80f
+2015-08-01T22:15:55.693021000 875.183615s error: Heartbeat timeout, killing connection to peer 52.27.150.236:29015
+2015-08-01T22:15:55.693069000 875.183649s error: Could not shutdown socket for writing: Can't assign requested address
+2015-08-01T22:15:55.693324000 875.183905s info: Disconnected from server "ip_172_31_18_219_fw3" a3495be2-4701-43bc-9e0f-6a7cfe96d80f
+2015-08-01T22:15:55.905726000 875.396307s notice: Connected to server "ip_172_31_18_219_fw3" a3495be2-4701-43bc-9e0f-6a7cfe96d80f
+2015-08-01T22:42:27.314780000 2466.854936s notice: Server got SIGINT from pid 1207, uid 502; shutting down...
+2015-08-01T22:42:27.315027000 2466.855182s notice: Shutting down client connections...
+2015-08-01T22:42:27.315150000 2466.855305s notice: All client connections closed.
+2015-08-01T22:42:27.315209000 2466.855364s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2015-08-01T22:42:27.325522000 2466.865677s notice: Storage engine shut down.
+2015-08-01T22:42:27.326046000 2466.866201s info: Disconnected from server "ip_172_31_18_219_fw3" a3495be2-4701-43bc-9e0f-6a7cfe96d80f
+2015-08-01T22:43:02.228603000 0.330117s notice: Running rethinkdb 2.0.3 (CLANG 4.2 (clang-425.0.28))...
+2015-08-01T22:43:02.339828000 0.441340s notice: Running on Darwin 14.4.0 x86_64
+2015-08-01T22:43:02.339926000 0.441437s notice: Loading data from directory /Users/ALegendaryWolf/Documents/Personal Projects/database/rethinkdb_data
+2015-08-01T22:43:03.436138000 1.537647s info: Automatically using cache size of 100 MB
+2015-08-01T22:43:03.436151000 1.537660s warn: Cache size does not leave much memory for server and query overhead (available memory: 107 MB).
+2015-08-01T22:43:03.436158000 1.537667s warn: Cache size is very low and may impact performance.
+2015-08-01T22:43:03.438047000 1.539556s notice: Listening for intracluster connections on port 29015
+2015-08-01T22:43:03.438333000 1.539843s info: Attempting connection to 1 peer...
+2015-08-01T22:43:03.586797000 1.688308s notice: Connected to server "ip_172_31_18_219_fw3" a3495be2-4701-43bc-9e0f-6a7cfe96d80f
+2015-08-01T22:43:03.589741000 1.691251s notice: Listening for client driver connections on port 28015
+2015-08-01T22:43:03.589958000 1.691467s notice: Listening for administrative HTTP connections on port 8080
+2015-08-01T22:43:03.591999000 1.693509s notice: Listening on addresses: 127.0.0.1, 192.168.0.6, ::1, fe80::1%1, fe80::e6ce:8fff:fe2b:3e84%5
+2015-08-01T22:43:03.592054000 1.693564s notice: Server ready, "Palominos_MacBook_Pro_local_fal" 420506ce-aaae-4334-bf5f-1e48f3c8142b
+2015-08-01T22:43:03.723510000 1.825020s notice: A newer version of the RethinkDB server is available: 2.0.4. You can read the changelog at <https://github.com/rethinkdb/rethinkdb/releases>.
+2015-08-01T22:52:37.471691000 572.015239s info: Disconnected from server "ip_172_31_18_219_fw3" a3495be2-4701-43bc-9e0f-6a7cfe96d80f
+2015-08-01T22:52:37.670336000 572.213885s notice: Connected to server "ip_172_31_18_219_fw3" a3495be2-4701-43bc-9e0f-6a7cfe96d80f
+2015-08-02T00:53:09.250503000 668.542766s info: Disconnected from server "ip_172_31_18_219_fw3" a3495be2-4701-43bc-9e0f-6a7cfe96d80f
+2015-08-02T00:53:09.662154000 668.954476s notice: Connected to server "ip_172_31_18_219_fw3" a3495be2-4701-43bc-9e0f-6a7cfe96d80f
+2015-08-02T02:54:03.585863000 783.916781s info: Disconnected from server "ip_172_31_18_219_fw3" a3495be2-4701-43bc-9e0f-6a7cfe96d80f
+2015-08-02T02:54:04.328114000 784.659091s notice: Connected to server "ip_172_31_18_219_fw3" a3495be2-4701-43bc-9e0f-6a7cfe96d80f
+2015-08-02T04:54:54.077884000 894.887673s info: Disconnected from server "ip_172_31_18_219_fw3" a3495be2-4701-43bc-9e0f-6a7cfe96d80f
+2015-08-02T04:54:54.395295000 895.205084s notice: Connected to server "ip_172_31_18_219_fw3" a3495be2-4701-43bc-9e0f-6a7cfe96d80f
+2015-08-02T06:55:46.095620000 1007.406983s info: Disconnected from server "ip_172_31_18_219_fw3" a3495be2-4701-43bc-9e0f-6a7cfe96d80f
+2015-08-02T06:55:46.404739000 1007.716102s notice: Connected to server "ip_172_31_18_219_fw3" a3495be2-4701-43bc-9e0f-6a7cfe96d80f
+2015-08-02T08:56:40.743599000 1122.600746s info: Disconnected from server "ip_172_31_18_219_fw3" a3495be2-4701-43bc-9e0f-6a7cfe96d80f
+2015-08-02T08:56:41.603402000 1123.460550s notice: Connected to server "ip_172_31_18_219_fw3" a3495be2-4701-43bc-9e0f-6a7cfe96d80f
+2015-08-02T10:57:32.251681000 1234.736986s info: Disconnected from server "ip_172_31_18_219_fw3" a3495be2-4701-43bc-9e0f-6a7cfe96d80f
+2015-08-02T10:57:32.692797000 1235.178102s notice: Connected to server "ip_172_31_18_219_fw3" a3495be2-4701-43bc-9e0f-6a7cfe96d80f
+2015-08-02T12:58:33.012783000 1355.037499s error: Heartbeat timeout, killing connection to peer 52.27.150.236:29015
+2015-08-02T12:58:33.012871000 1355.037587s error: Could not shutdown socket for writing: Can't assign requested address
+2015-08-02T12:58:33.013427000 1355.038143s info: Disconnected from server "ip_172_31_18_219_fw3" a3495be2-4701-43bc-9e0f-6a7cfe96d80f
+2015-08-02T14:08:53.263435000 1509.415377s notice: Connected to server "ip_172_31_18_219_fw3" a3495be2-4701-43bc-9e0f-6a7cfe96d80f
+2015-08-02T14:09:20.003225000 1536.155985s info: Disconnected from server "ip_172_31_18_219_fw3" a3495be2-4701-43bc-9e0f-6a7cfe96d80f
